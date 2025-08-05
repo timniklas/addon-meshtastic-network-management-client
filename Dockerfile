@@ -35,7 +35,7 @@ RUN cp /usr/share/novnc/vnc.html /usr/share/novnc/index.html
 
 # Install client
 RUN wget -O /tmp/client.deb https://github.com/meshtastic/network-management-client/releases/download/v0.3.1/Meshtastic.Network.Management.Client_0.3.1_amd64.deb
-RUN apt install /tmp/client.deb
+RUN apt install /tmp/client.deb -y
 
 # clean up installers
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
